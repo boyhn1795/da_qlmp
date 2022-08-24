@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLBHMyPhamModelStoreContainer" CdmEntityContainer="QLBHMyPhamEntities">
+    <EntitySetMapping Name="Chitiethoadonban">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.Chitiethoadonban">
+        <MappingFragment StoreEntitySet="Chitiethoadonban">
+          <ScalarProperty Name="mahdb" ColumnName="mahdb" />
+          <ScalarProperty Name="mamh" ColumnName="mamh" />
+          <ScalarProperty Name="soluongban" ColumnName="soluongban" />
+          <ScalarProperty Name="dongiaban" ColumnName="dongiaban" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chitiethoadonnhap">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.Chitiethoadonnhap">
+        <MappingFragment StoreEntitySet="Chitiethoadonnhap">
+          <ScalarProperty Name="mahdn" ColumnName="mahdn" />
+          <ScalarProperty Name="mamh" ColumnName="mamh" />
+          <ScalarProperty Name="soluongnhap" ColumnName="soluongnhap" />
+          <ScalarProperty Name="dongianhap" ColumnName="dongianhap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDonBan">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.HoaDonBan">
+        <MappingFragment StoreEntitySet="HoaDonBan">
+          <ScalarProperty Name="mahdb" ColumnName="mahdb" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="ngayban" ColumnName="ngayban" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDonNhap">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.HoaDonNhap">
+        <MappingFragment StoreEntitySet="HoaDonNhap">
+          <ScalarProperty Name="mahdn" ColumnName="mahdn" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="mancc" ColumnName="mancc" />
+          <ScalarProperty Name="ngaynhap" ColumnName="ngaynhap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHang">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="tenkh" ColumnName="tenkh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MatHang">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.MatHang">
+        <MappingFragment StoreEntitySet="MatHang">
+          <ScalarProperty Name="mamh" ColumnName="mamh" />
+          <ScalarProperty Name="tenmh" ColumnName="tenmh" />
+          <ScalarProperty Name="tenncc" ColumnName="tenncc" />
+          <ScalarProperty Name="namsx" ColumnName="namsx" />
+          <ScalarProperty Name="tonkho" ColumnName="tonkho" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NCC">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.NCC">
+        <MappingFragment StoreEntitySet="NCC">
+          <ScalarProperty Name="mancc" ColumnName="mancc" />
+          <ScalarProperty Name="tenncc" ColumnName="tenncc" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanVien">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="chucvu" ColumnName="chucvu" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="tennv" ColumnName="tennv" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doanhthunam">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.Doanhthunam">
+        <MappingFragment StoreEntitySet="Doanhthunam">
+          <ScalarProperty Name="Năm" ColumnName="Năm" />
+          <ScalarProperty Name="Tháng" ColumnName="Tháng" />
+          <ScalarProperty Name="tongsoluongban" ColumnName="tongsoluongban" />
+          <ScalarProperty Name="Doanhthu" ColumnName="Doanhthu" />
+          <ScalarProperty Name="mahdb" ColumnName="mahdb" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="mamh" ColumnName="mamh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doanhthuquy">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.Doanhthuquy">
+        <MappingFragment StoreEntitySet="Doanhthuquy">
+          <ScalarProperty Name="mahdb" ColumnName="mahdb" />
+          <ScalarProperty Name="mamh" ColumnName="mamh" />
+          <ScalarProperty Name="soluongban" ColumnName="soluongban" />
+          <ScalarProperty Name="dongiaban" ColumnName="dongiaban" />
+          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+          <ScalarProperty Name="Quý" ColumnName="Quý" />
+          <ScalarProperty Name="ngayban" ColumnName="ngayban" />
+          <ScalarProperty Name="Năm" ColumnName="Năm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doanhthuthang">
+      <EntityTypeMapping TypeName="QLBHMyPhamModel.Doanhthuthang">
+        <MappingFragment StoreEntitySet="Doanhthuthang">
+          <ScalarProperty Name="mahdb" ColumnName="mahdb" />
+          <ScalarProperty Name="mamh" ColumnName="mamh" />
+          <ScalarProperty Name="soluongban" ColumnName="soluongban" />
+          <ScalarProperty Name="dongiaban" ColumnName="dongiaban" />
+          <ScalarProperty Name="ngayban" ColumnName="ngayban" />
+          <ScalarProperty Name="Tháng" ColumnName="Tháng" />
+          <ScalarProperty Name="Năm" ColumnName="Năm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

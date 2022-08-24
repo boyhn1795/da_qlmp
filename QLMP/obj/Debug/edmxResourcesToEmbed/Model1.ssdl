@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLBHMyPhamModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Chitiethoadonban">
+    <Key>
+      <PropertyRef Name="mahdb" />
+      <PropertyRef Name="mamh" />
+    </Key>
+    <Property Name="mahdb" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mamh" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="soluongban" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="dongiaban" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Chitiethoadonnhap">
+    <Key>
+      <PropertyRef Name="mahdn" />
+      <PropertyRef Name="mamh" />
+    </Key>
+    <Property Name="mahdn" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mamh" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="soluongnhap" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="dongianhap" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="HoaDonBan">
+    <Key>
+      <PropertyRef Name="mahdb" />
+    </Key>
+    <Property Name="mahdb" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="manv" Type="varchar" MaxLength="50" />
+    <Property Name="makh" Type="varchar" MaxLength="50" />
+    <Property Name="ngayban" Type="date" />
+  </EntityType>
+  <EntityType Name="HoaDonNhap">
+    <Key>
+      <PropertyRef Name="mahdn" />
+    </Key>
+    <Property Name="mahdn" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="manv" Type="varchar" MaxLength="50" />
+    <Property Name="mancc" Type="varchar" MaxLength="50" />
+    <Property Name="ngaynhap" Type="date" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="makh" />
+    </Key>
+    <Property Name="makh" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tenkh" Type="nvarchar" MaxLength="50" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="50" />
+    <Property Name="sdt" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MatHang">
+    <Key>
+      <PropertyRef Name="mamh" />
+    </Key>
+    <Property Name="mamh" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tenmh" Type="nvarchar" MaxLength="50" />
+    <Property Name="tenncc" Type="nvarchar" MaxLength="50" />
+    <Property Name="namsx" Type="int" />
+    <Property Name="tonkho" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="dongia" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="NCC">
+    <Key>
+      <PropertyRef Name="mancc" />
+    </Key>
+    <Property Name="mancc" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tenncc" Type="nvarchar" MaxLength="50" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="50" />
+    <Property Name="sdt" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="manv" />
+    </Key>
+    <Property Name="manv" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tennv" Type="nvarchar" MaxLength="50" />
+    <Property Name="ngaysinh" Type="date" />
+    <Property Name="gioitinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="50" />
+    <Property Name="sdt" Type="nvarchar" MaxLength="50" />
+    <Property Name="matkhau" Type="nvarchar" MaxLength="50" />
+    <Property Name="taikhoan" Type="nvarchar" MaxLength="50" />
+    <Property Name="chucvu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLBHMypham.dbo.Doanhthunam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Doanhthunam">
+    <Key>
+      <PropertyRef Name="mahdb" />
+      <PropertyRef Name="mamh" />
+    </Key>
+    <Property Name="Năm" Type="int" />
+    <Property Name="Tháng" Type="int" />
+    <Property Name="tongsoluongban" Type="numeric" Precision="38" Scale="0" />
+    <Property Name="Doanhthu" Type="numeric" Precision="38" Scale="0" />
+    <Property Name="mahdb" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="manv" Type="varchar" MaxLength="50" />
+    <Property Name="mamh" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLBHMypham.dbo.Doanhthuquy' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Doanhthuquy">
+    <Key>
+      <PropertyRef Name="mahdb" />
+      <PropertyRef Name="mamh" />
+    </Key>
+    <Property Name="mahdb" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mamh" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="soluongban" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="dongiaban" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ThanhTien" Type="numeric" Precision="37" Scale="0" />
+    <Property Name="Quý" Type="int" />
+    <Property Name="ngayban" Type="date" />
+    <Property Name="Năm" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLBHMypham.dbo.Doanhthuthang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Doanhthuthang">
+    <Key>
+      <PropertyRef Name="mahdb" />
+      <PropertyRef Name="mamh" />
+    </Key>
+    <Property Name="mahdb" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mamh" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="soluongban" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="dongiaban" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ngayban" Type="date" />
+    <Property Name="Tháng" Type="int" />
+    <Property Name="Năm" Type="int" />
+  </EntityType>
+  <Association Name="FK_Chitiethoadonban_Chitiethoadonban">
+    <End Role="Chitiethoadonban" Type="Self.Chitiethoadonban" Multiplicity="1" />
+    <End Role="Chitiethoadonban1" Type="Self.Chitiethoadonban" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Chitiethoadonban">
+        <PropertyRef Name="mahdb" />
+        <PropertyRef Name="mamh" />
+      </Principal>
+      <Dependent Role="Chitiethoadonban1">
+        <PropertyRef Name="mahdb" />
+        <PropertyRef Name="mamh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chitiethoadonban_HoaDonBan">
+    <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Chitiethoadonban" Type="Self.Chitiethoadonban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDonBan">
+        <PropertyRef Name="mahdb" />
+      </Principal>
+      <Dependent Role="Chitiethoadonban">
+        <PropertyRef Name="mahdb" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chitiethoadonban_MatHang">
+    <End Role="MatHang" Type="Self.MatHang" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Chitiethoadonban" Type="Self.Chitiethoadonban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MatHang">
+        <PropertyRef Name="mamh" />
+      </Principal>
+      <Dependent Role="Chitiethoadonban">
+        <PropertyRef Name="mamh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chitiethoadonnhap_Chitiethoadonnhap">
+    <End Role="Chitiethoadonnhap" Type="Self.Chitiethoadonnhap" Multiplicity="1" />
+    <End Role="Chitiethoadonnhap1" Type="Self.Chitiethoadonnhap" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Chitiethoadonnhap">
+        <PropertyRef Name="mahdn" />
+        <PropertyRef Name="mamh" />
+      </Principal>
+      <Dependent Role="Chitiethoadonnhap1">
+        <PropertyRef Name="mahdn" />
+        <PropertyRef Name="mamh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chitiethoadonnhap_HoaDonNhap">
+    <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Chitiethoadonnhap" Type="Self.Chitiethoadonnhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDonNhap">
+        <PropertyRef Name="mahdn" />
+      </Principal>
+      <Dependent Role="Chitiethoadonnhap">
+        <PropertyRef Name="mahdn" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chitiethoadonnhap_MatHang">
+    <End Role="MatHang" Type="Self.MatHang" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Chitiethoadonnhap" Type="Self.Chitiethoadonnhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MatHang">
+        <PropertyRef Name="mamh" />
+      </Principal>
+      <Dependent Role="Chitiethoadonnhap">
+        <PropertyRef Name="mamh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDonBan_KhachHang">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="makh" />
+      </Principal>
+      <Dependent Role="HoaDonBan">
+        <PropertyRef Name="makh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDonBan_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="manv" />
+      </Principal>
+      <Dependent Role="HoaDonBan">
+        <PropertyRef Name="manv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDonNhap_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="manv" />
+      </Principal>
+      <Dependent Role="HoaDonNhap">
+        <PropertyRef Name="manv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDonNhap_NhaSanXuat">
+    <End Role="NCC" Type="Self.NCC" Multiplicity="0..1" />
+    <End Role="HoaDonNhap" Type="Self.HoaDonNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NCC">
+        <PropertyRef Name="mancc" />
+      </Principal>
+      <Dependent Role="HoaDonNhap">
+        <PropertyRef Name="mancc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLBHMyPhamModelStoreContainer">
+    <EntitySet Name="Chitiethoadonban" EntityType="Self.Chitiethoadonban" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chitiethoadonnhap" EntityType="Self.Chitiethoadonnhap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoaDonBan" EntityType="Self.HoaDonBan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoaDonNhap" EntityType="Self.HoaDonNhap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MatHang" EntityType="Self.MatHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NCC" EntityType="Self.NCC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Doanhthunam" EntityType="Self.Doanhthunam" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Doanhthunam].[Năm] AS [Năm], 
+    [Doanhthunam].[Tháng] AS [Tháng], 
+    [Doanhthunam].[tongsoluongban] AS [tongsoluongban], 
+    [Doanhthunam].[Doanhthu] AS [Doanhthu], 
+    [Doanhthunam].[mahdb] AS [mahdb], 
+    [Doanhthunam].[manv] AS [manv], 
+    [Doanhthunam].[mamh] AS [mamh]
+    FROM [dbo].[Doanhthunam] AS [Doanhthunam]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Doanhthuquy" EntityType="Self.Doanhthuquy" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Doanhthuquy].[mahdb] AS [mahdb], 
+    [Doanhthuquy].[mamh] AS [mamh], 
+    [Doanhthuquy].[soluongban] AS [soluongban], 
+    [Doanhthuquy].[dongiaban] AS [dongiaban], 
+    [Doanhthuquy].[ThanhTien] AS [ThanhTien], 
+    [Doanhthuquy].[Quý] AS [Quý], 
+    [Doanhthuquy].[ngayban] AS [ngayban], 
+    [Doanhthuquy].[Năm] AS [Năm]
+    FROM [dbo].[Doanhthuquy] AS [Doanhthuquy]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Doanhthuthang" EntityType="Self.Doanhthuthang" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Doanhthuthang].[mahdb] AS [mahdb], 
+    [Doanhthuthang].[mamh] AS [mamh], 
+    [Doanhthuthang].[soluongban] AS [soluongban], 
+    [Doanhthuthang].[dongiaban] AS [dongiaban], 
+    [Doanhthuthang].[ngayban] AS [ngayban], 
+    [Doanhthuthang].[Tháng] AS [Tháng], 
+    [Doanhthuthang].[Năm] AS [Năm]
+    FROM [dbo].[Doanhthuthang] AS [Doanhthuthang]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Chitiethoadonban_Chitiethoadonban" Association="Self.FK_Chitiethoadonban_Chitiethoadonban">
+      <End Role="Chitiethoadonban" EntitySet="Chitiethoadonban" />
+      <End Role="Chitiethoadonban1" EntitySet="Chitiethoadonban" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chitiethoadonban_HoaDonBan" Association="Self.FK_Chitiethoadonban_HoaDonBan">
+      <End Role="HoaDonBan" EntitySet="HoaDonBan" />
+      <End Role="Chitiethoadonban" EntitySet="Chitiethoadonban" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chitiethoadonban_MatHang" Association="Self.FK_Chitiethoadonban_MatHang">
+      <End Role="MatHang" EntitySet="MatHang" />
+      <End Role="Chitiethoadonban" EntitySet="Chitiethoadonban" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chitiethoadonnhap_Chitiethoadonnhap" Association="Self.FK_Chitiethoadonnhap_Chitiethoadonnhap">
+      <End Role="Chitiethoadonnhap" EntitySet="Chitiethoadonnhap" />
+      <End Role="Chitiethoadonnhap1" EntitySet="Chitiethoadonnhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chitiethoadonnhap_HoaDonNhap" Association="Self.FK_Chitiethoadonnhap_HoaDonNhap">
+      <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
+      <End Role="Chitiethoadonnhap" EntitySet="Chitiethoadonnhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chitiethoadonnhap_MatHang" Association="Self.FK_Chitiethoadonnhap_MatHang">
+      <End Role="MatHang" EntitySet="MatHang" />
+      <End Role="Chitiethoadonnhap" EntitySet="Chitiethoadonnhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDonBan_KhachHang" Association="Self.FK_HoaDonBan_KhachHang">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="HoaDonBan" EntitySet="HoaDonBan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDonBan_NhanVien" Association="Self.FK_HoaDonBan_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="HoaDonBan" EntitySet="HoaDonBan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDonNhap_NhanVien" Association="Self.FK_HoaDonNhap_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDonNhap_NhaSanXuat" Association="Self.FK_HoaDonNhap_NhaSanXuat">
+      <End Role="NCC" EntitySet="NCC" />
+      <End Role="HoaDonNhap" EntitySet="HoaDonNhap" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
